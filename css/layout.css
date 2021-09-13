@@ -1,0 +1,97 @@
+.blue_box{background: #228ae6;border-radius: 3px;padding: 10px 0;text-align: center;display: inline-block;}
+.white_box{background: #fff;border-radius: 3px;padding: 10px 0;text-align: center;color: #000;font-weight: 400;display: inline-block;}
+.blue_box:hover{background: #1b6ec2;}
+.white_box:hover{background: #e9ecef;}
+
+header.pc .mo_top{display: none;}
+header.pc .header{position: fixed;top: 0;width: 100%;z-index: 9;padding: 20px 0;}
+header.pc .header .close{display: none;}
+header.pc .header.down{background: #fff;box-shadow: -1px 3px 4px rgba(0,0,0,0.1);}
+header.pc .header.down .logo img{display: none;}
+header.pc .header.down .logo img.active{display: block;}
+header.pc .header.down ul li a,.header.down .right .lan a{color: #495057;font-weight: 300;}
+header.pc .header.down ul li a:hover{color: #000;}
+header.pc .header.down .right .lan a:last-child:before{background: #8a8a8a;}
+header.pc .header .logo{display:inline-block;vertical-align: middle;}
+header.pc .header .logo img{display: block;}
+header.pc .header .logo img.active{display: none;}
+header.pc .header ul{display: inline-block;margin-left: 20px;padding: 9px 0;}
+header.pc .header ul li{display: inline-block;}
+header.pc .header ul li a{display: inline-block;color: #fff;font-size: 14px;font-weight: 300;margin-left: 27px;}
+header.pc .header ul li a:hover{color: #228ae6;}
+header.pc .header .right{float: right;font-size: 14px;color: #fff;vertical-align: middle;}
+header.pc .header .right .lan{display: inline-block;margin-right: 20px;font-family: 'Poppins';}
+.header .right .lan a{display: inline-block;font-weight: 400;padding: 0 6px;position: relative;font-family: 'Poppins';}
+.header .right .lan a:last-child:before{content:"";position:absolute;left: -1px;width:1px;height: 12px;background:#fff;opacity: 0.5;top: 50%;transform: translateY(-50%);}
+header.pc .header .right .blue_box{width: 105px;/* font-weight: 300; */display: inline-block;}
+
+footer{color: #868e96;font-size: 14px;padding-top: 0;}
+footer>.inner{padding:40px 0;}
+footer .left{display: inline-block;}
+footer .left p{font-weight: 300;}
+footer .left p em{display:inline-block;padding-left:15px;}
+footer .left img{padding-bottom: 25px;}
+footer .right{float: right;text-align: right;}
+footer .right li{display: inline-block;}
+footer .right a{padding: 5px;display:inline-block;padding-top: 0;}
+footer .right p{margin-top: 40px;padding-right: 5px;font-weight: 300;}
+
+.main9 .tit,.main10 .tit{text-align: center;}
+.main9 .tit h1,.main10 .tit h1{color: #fff;font-size: 24px;margin-bottom: 20px;}
+.main9 .tit h1 br{display:none;}
+.main9 .tit p,.main10 .tit p{color: #fff;margin-bottom: 30px;font-weight: 300;}
+.main9{margin-top: 100px;background: #1862ab;padding: 100px 0;}
+.main9 .blue_box{color: #fff;width: 180px;display: block;margin: 0 auto;}
+
+.main10{background: #023970;padding: 100px 0;text-align: center;}
+.main10 ul li{display: inline-block;margin: 0 10px;}
+.main10 ul li a{width: 70px;height: 70px;display: inline-block;background: #fff;border-radius: 500px;position: relative;}
+.main10 ul li a img{position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);}
+.main10 ul li a:hover{background: #329af0;}
+
+@media(max-width:1000px){
+    header.mo .mo_top.down{background: #fff;box-shadow: -1px 3px 4px rgba(0,0,0,0.1);}
+    header.mo .mo_top.down .logo .active{display: block;}
+    header.mo .mo_top.down .logo img{display: none;}
+    header.mo .mo_top.down .open img{display: none;}
+    header.mo .mo_top.down .open .active{display: block;}
+    header.mo .mo_top{position: fixed;top: 0;z-index: 8;padding: 20px 0;width: 100%;left: 0;text-align: center;}
+    header.mo .mo_top .open{position: absolute;left: 30px;top: 50%;transform: translateY(-50%);width: 24px;}
+    header.mo .mo_top .open img{display: block;}
+    header.mo .mo_top .open .active{display: none;}
+    header.mo .mo_top .logo{display: block;width: 103px;margin: 0 auto;}
+    header.mo .mo_top .logo img{display: inline-block;margin:0 auto;display: block;}
+    header.mo .mo_top .logo .active{display: none;}
+    header.mo .mo_top .blue_box{position:absolute;right:30px;top: 50%;transform: translateY(-50%);padding: 5px 0;color: #fff;width: 55px;}
+    header.mo .header .inner .logo{display: none;}
+    header.mo .header{position: fixed;width: 270px;background: #fff;padding: 48px 30px;height: 100%;z-index: 999;left: -100%;transition: left 0.5s;}
+    header.mo .header .close{position: absolute;width: 30px;height: 30px;right: -40px;top: 15px;}
+    header.mo .header .close:before{content:"";width: 2px;height: 60%;background:#fff;position:absolute;border-radius: 500px;transform: translate(-50%,-50%) rotate(45deg);top: 50%;left: 50%;}
+    header.mo .header .close:after{content:"";width: 2px;height: 60%;background:#fff;position:absolute;border-radius: 500px;transform: translate(-50%,-50%) rotate(-45deg);top: 50%;left: 50%;}
+    header.mo .header .inner{padding: 0!important;}
+    header.mo .header ul a{font-size: 16px;font-weight: 500;margin-bottom: 14px;display: block;}
+    header.mo .header .right{border-top: 1px solid #ced4da;margin-top: 40px;}
+    header.mo .header .right .lan a{color:#868e96;padding: 5px;margin: 5px 0;font-family: 'Poppins', sans-serif;}
+    header.mo .header .right .lan a:last-child:before{background:#868e96;top: 47%;}
+    header.mo .inner .blue_box{width:100%;color:#fff;margin-top: 40px;}
+    footer .left{width: 320px;margin: 0 auto;display: block;}
+    footer .left img{display:block;margin:0 auto;padding-bottom: 20px;}
+    footer .right ul{display:none;}
+    footer .right p{margin-top: 20px;}
+    footer .right{width: 320px;margin: 0 auto;float: none;display: block;text-align: center;}
+
+    .main9{margin-top:50px;padding:50px 0;}
+    .main9 .tit h1 br{display:block;}
+    .main10{padding:50px 0;}
+    .main10 ul li a{width:45px;height:45px;}
+    .main10 ul li a img{width:60%;}
+    .main9 .tit h1, .main10 .tit h1{font-size:18px}
+}
+@media(max-width: 400px){
+    footer .left,footer .right{font-size:12px;width: 269px;}
+    header.mo .mo_top .open{left:20px;}
+    header.mo .mo_top .blue_box{right:20px;/* width: 40px; */}
+    .main10 ul li{margin:0 7px }
+}
+
+

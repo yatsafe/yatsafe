@@ -1,0 +1,31 @@
+html *{font-family: 'Poppins';font-weight: 400;letter-spacing: 0;}
+.tit p{font-weight: 600;}
+.main1 .inner a{font-weight:600;}
+.main1 .inner p{width: 400px;}
+.main2 .tit p{font-weight: 300;}
+.tit p{font-weight: 400;}
+.tit h1{margin-bottom: 15px;}
+.int ul li p{width: 200px;}
+.int ul li span{width: calc(100% - 206px);}
+.solution_tab .left ul li{width: 97px;}
+
+@media(max-width:1000px){
+    header.mo .mo_top .blue_box{width: 80px;}
+    .main1 .inner p{width: 100%;}
+    footer .left{width: 500px;}
+    .introduce_tab{margin-top: 30px;}
+    .solution_tab .left ul li{width: calc(50% - 50px);}
+    .solution_tab .left ul li:nth-of-type(2n){margin-right: 0;}
+    .solution_tab .left ul li:nth-of-type(n+3){margin-top:10px}
+}
+@media(max-width:600px){
+    footer .left{width: 100%;}
+    footer .left p{position: relative;}
+    footer .left p em{position: absolute;left: 50px;}
+    footer .right{margin-top: 30px;}
+}
+@media(max-width:500px){
+    header.mo .mo_top .blue_box{font-size: 11px;letter-spacing: -0.5px;width: 65px;}
+    .surpport .form ul li input{width: 100%;}
+    .surpport .form ul li{padding: 5px 0;}
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="130px" height="130px" viewBox="0 0 130 130" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 59.1 (101010) - https://sketch.com -->
+    <title>8BB46577-31A9-4A64-8DCD-800834BA6175</title>
+    <desc>Created with sketchtool.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="assets" transform="translate(-30.000000, -537.000000)">
+            <g id="Group-7" transform="translate(30.000000, 537.000000)">
+                <rect id="Rectangle" x="0" y="0" width="130" height="130"></rect>
+                <g id="Group-17" transform="translate(6.046512, 33.255814)">
+                    <path d="M96.1872016,16.1433798 C91.4195271,6.82268217 76.1399922,0.000201550388 58.0135581,0.000201550388 C39.887124,0.000201550388 24.6075891,6.82268217 19.8399147,16.1433798 L58.0135581,16.1433798 L96.1872016,16.1433798 Z" id="Stroke-1" stroke="#1D1D1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <polygon id="Stroke-3" stroke="#1D1D1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="96.1872016 16.1433798 58.0135581 16.1433798 19.8399147 16.1433798 0.000302325581 16.1433798 10.1292171 47.7968682 58.0135581 47.7968682 105.897899 47.7968682 116.026814 16.1433798"></polygon>
+                    <line x1="58.0132558" y1="19.6749457" x2="58.0132558" y2="38.8252558" id="Stroke-5" stroke="#1D1D1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+                    <path d="M67.1137597,30.4705891 C67.1137597,35.4962481 63.0394186,39.5705891 58.0137597,39.5705891 C52.987093,39.5705891 48.9127519,35.4962481 48.9127519,30.4705891" id="Stroke-7" stroke="#1D1D1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <line x1="51.1285969" y1="25.2143566" x2="64.8975116" y2="25.2143566" id="Stroke-9" stroke="#1D1D1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+                    <path d="M58.0132558,68.0508682 C71.5896899,68.0508682 83.4035659,64.6003256 89.5135659,59.5091628 L26.5129457,59.5091628 C32.6229457,64.6003256 44.4368217,68.0508682 58.0132558,68.0508682 Z" id="Stroke-11" stroke="#1D1D1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <polygon id="Fill-13" fill="#228AE6" points="92.9703566 47.7971705 23.0565581 47.7971705 10.5412868 47.7971705 10.5412868 59.5092636 26.5131473 59.5092636 89.5137674 59.5092636 105.485628 59.5092636 105.485628 47.7971705"></polygon>
+                    <polygon id="Stroke-15" stroke="#1D1D1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="92.9703566 47.7971705 23.0565581 47.7971705 10.5412868 47.7971705 10.5412868 59.5092636 26.5131473 59.5092636 89.5137674 59.5092636 105.485628 59.5092636 105.485628 47.7971705"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
