@@ -1,14 +1,13 @@
 <script type="text/javascript">
   var type = navigator.appName;
-  if (type == 'Netscape') {
-      var lang = navigator.language;
-  } else {
-      var lang = navigator.userLanguage;
-  }
-
-  var  = lang.substr(0, 2);
+  var lang = '';
   
-  if(country_code == 'ko')
+  if (type == 'Netscape')
+    lang = navigator.language;
+  else
+    lang = navigator.userLanguage;
+    
+  if(lang.substr(0, 2) == 'ko')
     location.href = "./ko";  
   else
     location.href = "./en";  
