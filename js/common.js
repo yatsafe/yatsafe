@@ -50,8 +50,8 @@ $(function () {
     responsivePage();
   });
   
-  $(".main1").css("height",$(window).height()+"px")
-  
+  // $(".main1").css("height",$(window).height()+"px")
+  // 메인 페이지 명암 이슈때문에 주석처리 2021.09.15 
 
   $(".cover").click(function(){
     $("header.mo .header").css("left","-100%");
