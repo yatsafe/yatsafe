@@ -15,6 +15,39 @@
     <script src="../../js/jquery-ui.min.js"></script>
     <script src="../../js/slick.js"></script>
     <script src="../../js/common.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            emailjs.init("user_cfHMHJwNL88kLUcMXYVUc");
+            
+            $(".submit").click(function () {
+                
+                if(!$("#agree1_1").is(":checked")){ alert("개인정보 수집에 동의해주셔야 합니다."); return; }
+                if($(".title").val().length == 0)){ alert("제목을 입력해주세요"); return; }
+                if($(".content").val().length == 0)){ alert("내용을 입력해주세요"); return; }
+                if($(".name").val().length == 0)){ alert("이름을 입력해주세요"); return; }
+                if($(".email").val().length == 0)){ alert("이메일을 입력해주세요"); return; }
+                if($(".phone").val().length == 0)){ alert("전화번호를 입력해주세요"); return; }
+                
+                var templateParams = {
+                    title: $(".title").val(),
+                    content: $(".content").val(),
+                    name: $(".name").val(),
+                    email: $(".email").val(),
+                    company: $(".company").val(),
+                    homepage: $(".homepage").val(),                   
+                    phone: $(".phone").val(),
+                };
+                emailjs.send('service_2izoa4t', 'template_8epnbiy', templateParams)
+                    .then(function (response) {
+                        alert("문의가 정상적으로 접수되었습니다. 확인 후 연락 드리겠습니다. 감사합니다.");
+                        location.reload();
+                    }, function (error) {
+                        alert("이메일 전송에 문제가 발생했습니다");
+                    });
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="cover"></div>
@@ -73,31 +106,31 @@
                     <ul>
                         <li>
                             <p>제목<em>*</em></p>
-                            <input type="text" placeholder="제목을 입력해 주세요">
+                            <input class="title" type="text" placeholder="제목을 입력해 주세요">
                         </li>
                         <li>
                             <p>내용<em>*</em></p>
-                            <input type="text" placeholder="내용을 입력해 주세요">
+                            <input class="content" type="text" placeholder="내용을 입력해 주세요">
                         </li>
                         <li>
                             <p>성함<em>*</em></p>
-                            <input type="text" placeholder="성함을 입력해 주세요">
+                            <input class="name" type="text" placeholder="성함을 입력해 주세요">
                         </li>
                         <li>
                             <p>이메일 주소<em>*</em></p>
-                            <input type="text" placeholder="이메일 주소를 입력해 주세요">
+                            <input class="email" type="text" placeholder="이메일 주소를 입력해 주세요">
                         </li>
                         <li>
                             <p>회사(기관)명</p>
-                            <input type="text" placeholder="회사(기관)명을 입력해 주세요">
+                            <input class="company" type="text" placeholder="회사(기관)명을 입력해 주세요">
                         </li>
                         <li>
                             <p>홈페이지</p>
-                            <input type="text" placeholder="홈페이지 주소를 입력해 주세요">
+                            <input class="homepage" type="text" placeholder="홈페이지 주소를 입력해 주세요">
                         </li>
                         <li>
                             <p>전화번호</p>
-                            <input type="text" placeholder="전화번호를 입력해 주세요">
+                            <input class="phone" type="text" placeholder="전화번호를 입력해 주세요">
                         </li>
                     </ul>
                     <div class="agree">
@@ -115,7 +148,7 @@
                             <label for="agree1_1">개인정보 수집 및 이용에 대해서 동의합니다.</label>
                         </div>
                     </div>
-                    <button type="button" class="blue_box">제출하기</button>
+                    <button type="button" class="submit blue_box">제출하기</button>
                 </div>
             </div>
         </div>
