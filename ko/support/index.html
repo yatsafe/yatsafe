@@ -27,7 +27,7 @@
                 if($(".name").val().length == 0){ alert("이름을 입력해주세요"); return; }
                 if($(".email").val().length == 0){ alert("이메일을 입력해주세요"); return; }
                 
-                $(".cover").fadeIn(300);
+                $(".loading").fadeIn(300);
                 
                 var templateParams = {
                     title: $(".title").val(),
@@ -41,11 +41,11 @@
                 emailjs.send('service_2izoa4t', 'template_8epnbiy', templateParams)
                     .then(function (response) {
                         alert("문의가 정상적으로 접수되었습니다. 확인 후 연락 드리겠습니다. 감사합니다.");
-                        $(".cover").fadeOut(300);
+                        $(".loading").fadeOut(300);
                         location.reload();
                     }, function (error) {
                         alert("이메일 전송에 문제가 발생했습니다");
-                        $(".cover").fadeOut(300);
+                        $(".loading").fadeOut(300);
                     });
             });
         });
@@ -55,7 +55,8 @@
     <script src="../../js/common.js"></script>
 </head>
 <body>
-    <div class="cover" style="
+    <div class="cover"></div>
+    <div class="loading" style="
         position: fixed;
         width: 100%;
         height: 100%;
