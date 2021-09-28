@@ -14,6 +14,43 @@
     <link rel="stylesheet" href="../../css/layout_en.css">
     <script src="../../js/jquery-1.11.2.min.js"></script>
     <script src="../../js/jquery-ui.min.js"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            emailjs.init("user_cfHMHJwNL88kLUcMXYVUc");
+            
+            $(".submit").click(function () {
+                
+                if($(".title").val().length == 0){ alert("Please enter the title"); return; }
+                if($(".content").val().length == 0){ alert("Please enter the message"); return; }
+                if($(".name").val().length == 0){ alert("Please enter the full name"); return; }
+                if($(".email").val().length == 0){ alert("Please enter your email address"); return; }
+                
+                $(".cover").fadeIn(300);
+                
+                var templateParams = {
+                    title: $(".title").val(),
+                    content: $(".content").val(),
+                    name: $(".name").val(),
+                    email: $(".email").val(),
+                    company: $(".company").val(),
+                    homepage: $(".homepage").val(),                   
+                    phone: $(".phone").val(),
+                };
+                emailjs.send('service_2izoa4t', 'template_8epnbiy', templateParams)
+                    .then(function (response) {
+                        alert("Your inquiry has been successfully received. We will contact you after confirmation. thank you.");
+                        $(".cover").fadeOut(300);
+                        location.reload();
+                    }, function (error) {
+                        alert("There was a problem sending your email.");
+                        $(".cover").fadeOut(300);
+                    });
+            });
+        });
+    </script>
+    
     <script src="../../js/slick.js"></script>
     <script src="../../js/common.js"></script>
 </head>
@@ -74,31 +111,31 @@
                     <ul>
                         <li>
                             <p>Title<em>*</em></p>
-                            <input type="text" placeholder="Please enter the title.">
+                            <input class="title" type="text" placeholder="Please enter the title.">
                         </li>
                         <li>
                             <p>Message<em>*</em></p>
-                            <input type="text" placeholder="Please enter the Message.">
+                            <input class="content" type="text" placeholder="Please enter the Message.">
                         </li>
                         <li>
                             <p>Full Name<em>*</em></p>
-                            <input type="text" placeholder="Please enter the Full Name.">
+                            <input class="name" type="text" placeholder="Please enter the Full Name.">
                         </li>
                         <li>
                             <p>Email<em>*</em></p>
-                            <input type="text" placeholder="Please enter your email address.">
+                            <input class="email" type="text" placeholder="Please enter your email address.">
                         </li>
                         <li>
                             <p>Company</p>
-                            <input type="text" placeholder="Please enter the name of the company(institution).">
+                            <input class="company" type="text" placeholder="Please enter the name of the company(institution).">
                         </li>
                         <li>
                             <p>Website</p>
-                            <input type="text" placeholder="Please enter the homepage address.">
+                            <input class="homepage" type="text" placeholder="Please enter the homepage address.">
                         </li>
                         <li>
                             <p>Phone</p>
-                            <input type="text" placeholder="Please enter your phone number.">
+                            <input class="phone" type="text" placeholder="Please enter your phone number.">
                         </li>
                     </ul>
                     <!-- <div class="agree">
@@ -116,7 +153,7 @@
                             <label for="agree1_1">개인정보 수집 및 이용에 대해서 동의합니다.</label>
                         </div>
                     </div> -->
-                    <button type="button" class="blue_box">Submit</button>
+                    <button type="button" class="submit blue_box">Submit</button>
                 </div>
             </div>
         </div>
