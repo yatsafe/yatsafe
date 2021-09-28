@@ -23,11 +23,11 @@
             $(".submit").click(function () {
                 
                 if(!$("#agree1_1").is(":checked")){ alert("개인정보 수집에 동의해주셔야 합니다."); return; }
-                if($(".title").val().length == 0)){ alert("제목을 입력해주세요"); return; }
-                if($(".content").val().length == 0)){ alert("내용을 입력해주세요"); return; }
-                if($(".name").val().length == 0)){ alert("이름을 입력해주세요"); return; }
-                if($(".email").val().length == 0)){ alert("이메일을 입력해주세요"); return; }
-                if($(".phone").val().length == 0)){ alert("전화번호를 입력해주세요"); return; }
+                if($(".title").val().length == 0){ alert("제목을 입력해주세요"); return; }
+                if($(".content").val().length == 0){ alert("내용을 입력해주세요"); return; }
+                if($(".name").val().length == 0){ alert("이름을 입력해주세요"); return; }
+                if($(".email").val().length == 0){ alert("이메일을 입력해주세요"); return; }
+                if($(".phone").val().length == 0){ alert("전화번호를 입력해주세요"); return; }
                 
                 var templateParams = {
                     title: $(".title").val(),
